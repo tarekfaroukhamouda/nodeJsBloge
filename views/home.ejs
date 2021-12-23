@@ -1,0 +1,14 @@
+<%- include("patrials/header") -%>
+
+
+<h1>Home</h1>
+<p><%=contant%></p>
+<% allposts.forEach((post) => { %>
+     <h2><%=post.blogtitle%></h2>
+     <% var trimmedString = post.blogCOntant.substring(0, 100); %>
+     <p><%=trimmedString%><a href="http://localhost:3000/post/<%=post.blogtitle%>">Read More...</a></p>
+<% });%>
+
+
+
+<%- include("patrials/footer") -%>
